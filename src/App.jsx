@@ -5,6 +5,7 @@ import AddNewNote from './AddNewNote'
 import './App.css'
 import NoteList from './NoteList'
 import NoteHeader from './NoteHeader';
+import NoteStatus from './NoteStatus';
 
 
 function App() {
@@ -24,14 +25,17 @@ function handelToggle(id) {
 
 };
 
+
   return (
-    <div>
+    <div className='container'>
       <NoteHeader notes={notes.length}/>
       <div className='note-app'>
         <AddNewNote setNotes={setNotes}/>
-        <NoteList notes={notes} onDelete={handeldelete} onToggle={handelToggle}/>
-
-
+        
+       <div className='note-container'>
+       <NoteStatus notes={notes}/>
+       <NoteList notes={notes} onDelete={handeldelete} onToggle={handelToggle}/>
+       </div>
       </div>
 
     </div>

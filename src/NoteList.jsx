@@ -2,7 +2,7 @@ import { MdClose } from "react-icons/md";
 
 function NoteList({notes,onDelete,onToggle}) {
   return (
-    <div className='note-container'>
+    <div className='note-list'>
 
      {notes.map((item)=>(
         <NoteItem key={item.id} item={item} onDelete={onDelete} onToggle={onToggle}/>
