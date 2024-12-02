@@ -2,6 +2,7 @@
 
 import AddNewNote from './AddNewNote'
 import './App.css'
+import NoteList from './NoteList'
 
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
       <div className='note-header'>noteHeader</div>
       <div className='note-app'>
         <AddNewNote/>
-        
+        <NoteList/>
+
 
       </div>
 

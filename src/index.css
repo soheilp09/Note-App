@@ -87,3 +87,8 @@ select {
   color: white;
   font-size: 1rem;
 }
+.CloseIcon{
+  font-size: xx-large;
+  color: #f43f5e;
+  margin-top: 0.3rem;
+}
