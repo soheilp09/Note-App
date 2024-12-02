@@ -69,7 +69,9 @@
 }
 
 .note-item.completed {
-  opacity: 80%;
+  filter: blur(4px);
+  transition: all 1s;
+
 }
 
 .note-item__header .title {

@@ -1,11 +1,11 @@
 import { MdClose } from "react-icons/md";
 
-function NoteList({notes,onDelete}) {
+function NoteList({notes,onDelete,onToggle}) {
   return (
     <div className='note-container'>
 
      {notes.map((item)=>(
-        <NoteItem key={item.id} item={item} onDelete={onDelete}/>
+        <NoteItem key={item.id} item={item} onDelete={onDelete} onToggle={onToggle}/>
      ))}
         
     </div>
@@ -13,10 +13,10 @@ function NoteList({notes,onDelete}) {
 };
 
 
-function NoteItem({item,onDelete}){
+function NoteItem({item,onDelete,onToggle}){
     
 return(
-    <div className="note-item">
+    <div className={`note-item ${item.completed ? "completed" : ""}`}>
     <div className="note-item__header">
        <div>
        <p className="title">{item.title}</p>
@@ -24,7 +24,7 @@ return(
        </div>
     <div className="actions">
         <button onClick={()=>onDelete(item.id)}><MdClose className="CloseIcon"/></button>
-        <input type="checkbox" name="" id="" />
+        <input onChange={()=>onToggle(item.id)} type="checkbox" name=""  id="" />
     </div>
     </div>
     <div className="note-item__footer">
