@@ -8,6 +8,8 @@ function AddNewNote({setNotes}) {
 
     function handelSubmit(e) {
         e.preventDefault();
+        if(!title || !description) return null;
+        
         const NewNote={
             title,
             description,
@@ -15,7 +17,9 @@ function AddNewNote({setNotes}) {
             completed: false,
             creaditAt: new Date().toISOString()
         };
+        
         setNotes((prev)=>[...prev,NewNote]);
+       
         setTitle("");
         setDescription("");
     }

@@ -1,7 +1,8 @@
 
 
 function NoteStatus({notes}) {
-  const AllNotes = notes.length;
+
+ const AllNotes = notes.length;
  const completed =  notes.filter((item)=>item.completed === true).length;
  const Open = AllNotes - completed;
 
