@@ -12,13 +12,18 @@ function App() {
   const [notes,setNotes] = useState([]);
 
 
+function handeldelete(id){
+const filterdNotes =   notes.filter((item)=>item.id != id);
+setNotes(filterdNotes)
+
+}
   
   return (
     <div>
       <NoteHeader notes={notes.length}/>
       <div className='note-app'>
         <AddNewNote setNotes={setNotes}/>
-        <NoteList notes={notes}/>
+        <NoteList notes={notes} onDelete={handeldelete}/>
 
 
       </div>
