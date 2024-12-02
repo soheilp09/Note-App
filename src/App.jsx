@@ -4,6 +4,7 @@ import { useState } from 'react'
 import AddNewNote from './AddNewNote'
 import './App.css'
 import NoteList from './NoteList'
+import NoteHeader from './NoteHeader';
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
   
   return (
     <div>
-      <div className='note-header'>noteHeader</div>
+      <NoteHeader notes={notes.length}/>
       <div className='note-app'>
         <AddNewNote setNotes={setNotes}/>
         <NoteList notes={notes}/>

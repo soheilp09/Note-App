@@ -18,8 +18,6 @@ function AddNewNote({setNotes}) {
         setNotes((prev)=>[...prev,NewNote]);
         setTitle("");
         setDescription("");
-        
-    
     }
     
   return (
