@@ -5,12 +5,10 @@ function NoteHeader({notes,sort,setSort}) {
     <h2>My Notes({notes})</h2>
 
  <select onChange={(e)=>setSort(e.target.value)} value={sort}>
-  <option   value="latest">Latest</option>
-  <option   value="earliest">Earliest</option>
-  <option   value="completed">Completed</option>
+  <option   value="latest">Sort Based By Latest Notes</option>
+  <option   value="earliest">Sort Based By Earliest Notes</option>
+  <option   value="completed">Sort Based By Completed Notes</option>
  </select>
-
-
 </div>
   )
 }

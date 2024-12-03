@@ -76,6 +76,16 @@ select {
   border-radius: 0.5rem;
   color: var(--text-700);
   font-size: 1rem;
+  border: 1px solid #c2c2c277;
+}
+.text-field:focus{
+  transition: all 2s;
+  background: #4e46e533;
+  border: 1px solid #4e46e54f;
+}
+.text-field:hover{
+  transition: all 2s;
+  background: #4e46e533;
 }
 .btn {
   border-radius: 0.5rem;
